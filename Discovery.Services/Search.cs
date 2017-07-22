@@ -58,7 +58,9 @@ namespace Discovery.Services
             slots = GetSlotOrDefault(version: ver, debug: debug, json: slots);
             manifest.Merge(slots, new JsonMergeSettings { MergeArrayHandling = MergeArrayHandling.Union });
 
-            return req.CreateResponse(HttpStatusCode.OK, manifest);
+            log.Info(manifest.ToString());
+
+            return req.CreateResponse(HttpStatusCode.OK, manifest, "application/json");
 
         }
 
