@@ -1,0 +1,79 @@
+﻿{
+  "title": "Approve.ly API Slots",
+  "version": "0.0.1.6609",
+
+  "apislots": [{
+      "name": "release",
+      "version": "1.3.7",
+      "apiendpoint": "http://restapprovely.azurewebsites.net",
+      "schema": {},
+      "config": {
+        "telemetry": {
+          "enabled": true,
+          "tracker": "UA-60830768-5"
+        },
+        "notifications": {
+          "push": {
+            "apiendpoint": "https://approvelymobileservice.azure-mobile.net/",
+            "key": "uCXqFxAhMhXCnysoLIbCidQsBXTcCy87"
+          }
+        }
+      }
+    },
+    {
+      "name": "latest",
+      "apiendpoint": "http://restapprovely-staging.azurewebsites.net",
+      "version": "1.3.8",
+      "schema": {},
+      "config": {
+        "telemetry": {
+          "enabled": true,
+          "tracker": "UA-60830768-5"
+        },
+        "notifications": {
+          "push": {
+            "apiendpoint": "https://approvelymobileservice.azure-mobile.net/",
+            "key": "uCXqFxAhMhXCnysoLIbCidQsBXTcCy87"
+          }
+        }
+      }
+    },
+    {
+      "name": "beta",
+      "apiendpoint": "https://lucidmbaasapi2.azurewebsites.net",
+      "version": "1.3.9",      
+      "schema": {},
+      "config": {
+        "telemetry": {
+          "enabled": true,
+          "tracker": "UA-60830768-3"
+        },
+        "notifications": {
+          "push": {
+            "apiendpoint": "https://approvelymobileappservice.azurewebsites.net/",
+            "gcmid": "557174251998"
+          }
+        }
+      }
+    },
+    {
+      "name": "alpha",
+      "isindebugmode": true,
+      "isdefault": true,
+      "apiendpoint": "http://172.20.4.90/rest.approve.ly/",
+      "schema": {},
+      "config": {
+        "telemetry": {
+          "enabled": false,
+          "tracker": "UA-60830768-3"
+        },
+        "notifications": {
+          "push": {
+            "apiendpoint": "https://approvelymobileappservice.azurewebsites.net/",
+            "gcmid": "557174251998"
+          }
+        }
+      }
+    }
+  ]
+}

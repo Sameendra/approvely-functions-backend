@@ -1,0 +1,76 @@
+﻿{
+  "title": "Approve.ly Default Configuration",
+  "version": "0.0.1.8723",
+
+  "config": {
+    "telemetry": {
+      "enabled": false,
+      /* Accepted values are all, events, and screens. */
+      "level": "all"
+    },
+
+    "notifications": {
+      "enabled": true,
+      /* Accepted values are all, email, and push. */
+      "level": "push",
+      /* Accepted values are promptu, daily, weekly, monthly. */
+      "push": {
+        "gcmid": "811274331389"
+      },
+      "email": {
+        "frequency": "weekly"
+      }
+    },
+
+    "alerts": {
+      "taptohide": false,
+      /* Wait for 'n' seconds to hide. */
+      "hideafterseconds": 4
+    },
+
+    "feedback": {
+      "shaketoreport": true,
+      /* Accepted values are text, summary, and detailed. */
+      "template": "summary"
+    },
+
+    /* Private accounts are invitees only and will not get listed in searches. */
+    "privateaccount": true,
+    "maximumcompanies": 1,
+    "maximumadministrators": 1,
+    "disposeifempty": true,
+
+    "canselfdestruct": true,
+    "canleave": true,
+    "candelegaterights": true,
+
+    "confirmapproval": false,
+    "canreapprove": false,
+
+    /* Accepted values are private, invitees, company, and everyone. */
+    "sharingvisibility": "company",
+    "resharing": true,
+    "selfsharing": true,
+
+    /* Share content with apps like whatsapp, viber, email, etc. */
+    "externalappsharing": false,
+
+    "canemailcaptures": true,
+    /* Accepted values are captures, summary, and detailed. */
+    "emailtemplate": "captures",
+
+    "cansendtoprint": true,
+    /* Accepted values are captures, summary, and detailed. */
+    "printtemplate": "captures",
+
+    "caninvite": true,
+    "maximuminvitations": 5,
+
+    /* Accepted values are pics, docs, and all. */
+    "captureformat": "pics",
+    "canpickfromgallery": true,
+    "multicaptureenabled": true,
+    "maximumcaptures": 4
+  }
+
+}
