@@ -16,7 +16,7 @@ namespace Discovery.Services
     public static class Search
     {
         [FunctionName("Search")]
-        public static async Task<HttpResponseMessage> Run([HttpTrigger(AuthorizationLevel.Function, "get", "post", Route = null)] HttpRequestMessage req, [Blob("functiondata/Slots.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string slotsconfig, [Blob("functiondata/Defaults.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string defaultconfig, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestMessage req, [Blob("functiondata/Slots.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string slotsconfig, [Blob("functiondata/Defaults.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string defaultconfig, TraceWriter log)
         {
 
             JObject defaults;
@@ -60,7 +60,9 @@ namespace Discovery.Services
 
             log.Info(manifest.ToString());
 
-            return req.CreateResponse(HttpStatusCode.OK, manifest, "application/json");
+            var res = req.CreateResponse(HttpStatusCode.OK);
+            res.Content = new StringContent (manifest.ToString(), System.Text.Encoding.UTF8, "application/json");
+            return res;
 
         }
 
