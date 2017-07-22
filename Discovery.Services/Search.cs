@@ -16,7 +16,7 @@ namespace Discovery.Services
     public static class Search
     {
         [FunctionName("Search")]
-        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get")] HttpRequestMessage req, [Blob("functiondata/Slots.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string slotsconfig, [Blob("functiondata/Defaults.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string defaultconfig, TraceWriter log)
+        public static HttpResponseMessage Run([HttpTrigger(AuthorizationLevel.Function, "get", Route=null)] HttpRequestMessage req, [Blob("functiondata/Slots.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string slotsconfig, [Blob("functiondata/Defaults.json", FileAccess.Read, Connection = "AzureWebJobsStorage")] string defaultconfig, TraceWriter log)
         {
 
             JObject defaults;
