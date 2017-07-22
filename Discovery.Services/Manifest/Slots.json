@@ -60,7 +60,7 @@
       "name": "alpha",
       "isindebugmode": true,
       "isdefault": true,
-      "apiendpoint": "http://172.20.4.90/rest.approve.ly/",
+      "apiendpoint": "http://172.20.4.90/rest.approve.ly/testingcommit",
       "schema": {},
       "config": {
         "telemetry": {
